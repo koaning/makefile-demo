@@ -1,5 +1,15 @@
 .PHONY: docs
 
+help:
+	@echo "available commands"
+	@echo " - install    : installs all requirements"
+	@echo " - dev        : installs all development requirements"
+	@echo " - test       : run all unit tests"
+	@echo " - clean      : cleans up all folders"
+	@echo " - flake      : runs flake8 style checks"
+	@echo " - check      : runs all checks (tests + style)"
+	@echo " - docs       : generate docs locally in /docs folder"
+
 install: 
 	pip install -r requirements.txt
 
