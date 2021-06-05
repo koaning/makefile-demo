@@ -1,5 +1,3 @@
-.PHONY: docs
-
 help:
 	@echo "available commands"
 	@echo " - install    : installs all requirements"
@@ -27,5 +25,5 @@ flake:
 
 check: flake test clean
 
-docs:
-	pdoc --html --force --output-dir docs common
+docs: common.py
+	pdoc --html --force --output-dir $@ $?
